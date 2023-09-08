@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adatátvitel számolás</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <div>
+    <span id="title">Adatátvitel számláló</span><br><br>
+    <label for="atviteliMennyiseg">Átviteli mennyiség:</label>
+    <input type="text" id="atviteliMennyiseg" name="atviteliMennyiseg"> <!--id name ugyan az-->
+    <select name="atviteliMennyisegSelect" id="atviteliMennyisegSelect"> <!--id name ugyan az-->
+      <option value="KB">KB</option>
+      <option value="MB">MB</option>
+      <option value="GB">GB</option>
+      <option value="TB">TB</option>
+    </select><br><br>
+    <label for="atviteliSebesseg">Átviteli sebesség:</label>
+    <input type="range" value="0" min="0" max="1000" id="atviteliSebesseg" name="atviteliSebesseg"
+          onchange="AtviteliSebessegValtozas()"><!--min és max nem 10 és 5000-->
+    <span id="atviteliSebessegSzam">0</span>
+    <select name="atviteliSebessegSelect" id="atviteliSebessegSelect"> <!--id name ugyan az-->
+      <option value="KB/s">KB/s</option>
+      <option value="MB/s">MB/s</option>
+      <option value="GB/s">GB/s</option>
+    </select><br><br>
+    <span>Átviteli idő:</span>
+    <span id="atviteliIdoSzam">0 mp</span><br><br>
+    <button onclick="AtviteliIdoSzamitas()">Számítás</button>
+  </div>
+</body>
+
+</html>
